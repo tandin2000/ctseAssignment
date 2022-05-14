@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 //Importing api
 const cartAPI = require('./src/routes/cart.routes');
 
-
 const app = express();
 app.use(cors());
 
@@ -16,8 +15,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = 8081;
-
-
 
 const MONGODB_URI = `mongodb+srv://admin:1234@db.soqaf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
