@@ -1,13 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
 //Importing api
-const videoApi = require('./src/routes/video.routes');
+const cartAPI = require('./src/routes/cart.routes');
 
-dotenv.config();
+// dotenv.config();
 const app = express();
 app.use(cors());
 
@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 8081;
  * Get MONGODB_URI from .env
  */
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = `mongodb+srv://admin:1234@db.soqaf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
@@ -41,11 +41,11 @@ mongoose.connection.once('open', () => {
 });
 
 app.route('/').get((req, res) => {
-    res.send('Cart Services Connect');
+    res.send('Cart Services Up...');
 });
 
 // Api calls
-app.use('/video', videoApi());
+app.use('/cart', cartAPI());
 // End of api calls
 
 app.listen(PORT, () => {
