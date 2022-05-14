@@ -1,13 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
-// const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
 //Importing api
 const cartAPI = require('./src/routes/cart.routes');
 
-// dotenv.config();
+
 const app = express();
 app.use(cors());
 
@@ -16,11 +15,9 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 8081;
+const PORT = 8081;
 
-/**
- * Get MONGODB_URI from .env
- */
+
 
 const MONGODB_URI = `mongodb+srv://admin:1234@db.soqaf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
