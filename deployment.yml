@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-deployment
+  name: node-app-deployment
   labels:
-    app: nodeapp
+    app: node-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: node-app
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: node-app 
     spec:
       containers:
-      - name: nodeserver
+      - name: node-server
         image: it19098838/assignmentctse:latest
         ports:
         - containerPort: 8081
