@@ -17,5 +17,7 @@ spec:
       containers:
       - name: node-server
         image: it19098838/assignmentctse:latest
+        imagePullSecrets:
+        - name: regcred
         ports:
         - containerPort: 8081
