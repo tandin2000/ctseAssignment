@@ -4,7 +4,6 @@ const findUser = async (userId) => {
     return await Cart.find({}).where({userId: userId})
 };
 
-
 const add = async (req, res) =>{
     const data = {
         productId: req.body.productId,
