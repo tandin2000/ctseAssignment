@@ -17,6 +17,5 @@ spec:
       containers:
       - name: node-server
         image: it19098838/assignmentctse:latest
-        imagePullPolicy: Never
         ports:
         - containerPort: 8081
