@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: it19098838/ctseassignment:latest
+        image: it19098838/assignmentctse:latest
         ports:
         - containerPort: 8081
