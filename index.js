@@ -35,7 +35,7 @@ mongoose.connection.once('open', () => {
 });
 
 app.route('/').get((req, res) => {
-    res.send('Cart Services Up...');
+    res.send('Backend Service Connected');
 });
 
 // Api calls
