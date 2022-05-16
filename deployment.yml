@@ -1,23 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app-deployment
-  labels:
-    app: node-app
+  name: assignment-ctse
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: node-app
+      app: assignment-ctse
   template:
     metadata:
       labels:
-        app: node-app 
+        app: assignment-ctse
     spec:
       containers:
       - name: node-server
-        image: it19098838/assignmentctse:latest
-        imagePullSecrets:
-        - name: regcred
+        image: it19098838/assignment-ctse:latest
         ports:
         - containerPort: 8081
